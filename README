@@ -1,16 +1,19 @@
 Dalia: 
 
 Technologies :
-CodeIgniter
+Symfony 2
 Jquery
 Html5
 Css3
 
 
-Virtualhost : 
 <virtualhost *:80>
-  ServerName troger.devdalia.tf1.fr
+    ServerName troger.devdalia.tf1.fr
 
-    DocumentRoot "/var/local/webroot/dalia/"
-    DirectoryIndex index.php
+    DocumentRoot "/var/local/webroot/dalia/web"
+    DirectoryIndex app_dev.php
+    <directory "/var/local/webroot/apitfou/web">
+      AllowOverride All
+      Allow from All
+    </directory>
 </virtualhost>
