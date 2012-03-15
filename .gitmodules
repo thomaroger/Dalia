@@ -1,0 +1,28 @@
+[doctrine-fixtures]
+    git=http://github.com/doctrine/data-fixtures.git
+    target=vendor/bundles/data-fixtures
+    
+[DoctrineFixturesBundle]
+    git=http://github.com/symfony/DoctrineFixturesBundle.git
+    target=vendor/bundles/Symfony/Bundle/DoctrineFixturesBundle
+
+[Pagerfanta]
+    git=http://github.com/whiteoctober/Pagerfanta.git
+    target=vendor/bundles//pagerfanta
+
+[WhiteOctoberPagerfantaBundle]
+    git=http://github.com/whiteoctober/WhiteOctoberPagerfantaBundle.git
+    target=vendor/bundles/WhiteOctober/PagerfantaBundle
+
+[SonataIntlBundle]
+    git=http://github.com/sonata-project/SonataIntlBundle.git
+    target=vendor/bundles/Sonata/IntlBundle
+
+[GravatarBundle]
+    git=http://github.com/ornicar/GravatarBundle.git
+    target=vendor/bundles/Ornicar/GravatarBundle
+    
+[AdmingeneratorGeneratorBundle]
+    git=git://github.com/cedriclombardot/AdmingeneratorGeneratorBundle.git
+    target=vendor/bundles/Admingenerator/GeneratorBundle
+    version=origin/master    
