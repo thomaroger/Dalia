@@ -1,0 +1,16 @@
+Dalia: 
+
+Technologies :
+CodeIgniter
+Jquery
+Html5
+Css3
+
+
+Virtualhost : 
+<virtualhost *:80>
+  ServerName troger.devdalia.tf1.fr
+
+    DocumentRoot "/var/local/webroot/dalia/"
+    DirectoryIndex index.php
+</virtualhost>
