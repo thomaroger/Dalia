@@ -12,7 +12,8 @@
 <div id="desktops">
     <ul>
 	<?php foreach($desktops->result() as $desktop) : ?>
-	    <li>
+	    <li class='user_space'>
+        <?php echo form_hidden('desktop_id', $desktop->id); ?>
 	    <span><?php echo ucfirst($desktop->prenom)." ".strtoupper($desktop->nom); ?></span>
 	    <?php if($daliaDesktop == $desktop->id) : ?>
             <span class="assiociate"> bureau associé </span>
@@ -30,5 +31,7 @@
 <?php if(!$isAjax) : ?>
     <?php $this->load->view('footer');?>
 <?php endif; ?>
+
+    <?php $this->load->view('open_space_js');?>
 </div>
 

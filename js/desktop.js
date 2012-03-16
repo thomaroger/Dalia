@@ -1,7 +1,7 @@
     $(function() {
         // there's the gallery and the trash
         var $gallery = $( "#gallery" ),
-            $trash = $( "#trash" )
+            $trash = $( "#trash" ),
             $bin = $( "#bin" );
 
         // let the gallery items be draggable
@@ -29,7 +29,8 @@
                 deleteImage( ui.draggable );
             }
         });
-
+        
+        
         // let the gallery be droppable as well, accepting items from the trash
         $gallery.droppable({
             accept: "#trash li",
@@ -128,6 +129,7 @@
               
         $( "a.ui-icon-plus" ).click(function( event ) {
             var userId = $('input[name="desktop_id"]').val();
+            
             $.ajax({
                 url: '/desktop/index/' + userId,
                 success: function(data) {
@@ -146,11 +148,6 @@
               });
         });
         
-        // view open space
-        function viewOpenSpace() {
-            var src = $link.attr( "href" );
-             
-        }
         
     });
     
