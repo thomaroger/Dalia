@@ -90,7 +90,7 @@ $autoload['libraries'] = array('database');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url');
+$autoload['helper'] = array('url', 'form', 'cookie');
 
 
 /*
@@ -135,7 +135,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array('modeldesktop');
+$autoload['model'] = array('modeldesktop', 'modelpostit');
 
 
 /* End of file autoload.php */

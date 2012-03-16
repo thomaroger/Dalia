@@ -9,7 +9,8 @@ class Desktops extends CI_Controller {
 	public function index()
 	{
 	    $data = array();
-	    $data['query'] = $this->modeldesktop->getDesktops();
+	    $data['desktops'] = $this->modeldesktop->getDesktops();
+	    $data['daliaDesktop'] = $this->input->cookie('daliaDesktop');
 		$this->load->view('desktops', $data);
 	}
 }

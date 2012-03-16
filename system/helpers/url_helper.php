@@ -154,17 +154,19 @@ if ( ! function_exists('anchor'))
 {
 	function anchor($uri = '', $title = '', $attributes = '')
 	{
-		$title = (string) $title;
+		
+	    $title = (string) $title;
 
 		if ( ! is_array($uri))
-		{
-			$site_url = ( ! preg_match('!^\w+://! i', $uri)) ? site_url($uri) : $uri;
+		{   
+		    $site_url = ( ! preg_match('!^\w+://! i', $uri)) ? site_url($uri) : $uri;
+			   
 		}
 		else
 		{
 			$site_url = site_url($uri);
 		}
-
+        $site_url = str_replace('/index.php','',$site_url);
 		if ($title == '')
 		{
 			$title = $site_url;
@@ -537,7 +539,7 @@ if ( ! function_exists('redirect'))
 		{
 			$uri = site_url($uri);
 		}
-
+        $uri = str_replace('/index.php','',$uri);
 		// IIS environment likely? Use 'refresh' for better compatibility
 		if (DIRECTORY_SEPARATOR !== '/' && $method === 'auto')
 		{
