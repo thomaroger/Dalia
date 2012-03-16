@@ -15,6 +15,16 @@
             <textarea name="texte" ></textarea>  
         </div>
         <div class="ligne">
+            <label> Couleur </label>
+            <br />
+            <select name="type">
+                <option value="0">Jaune</option>
+                <option value="1">Bleu</option>
+                <option value="2">Vert</option>
+                <option value="3">Rouge</option>
+            </select>
+        </div>
+        <div class="ligne">
             <input type="submit" value="ajouter" />
         </div>
     <div>

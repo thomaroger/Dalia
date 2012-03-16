@@ -29,10 +29,23 @@
             <li class="ui-widget-content ui-corner-tr">
                 <?php echo form_hidden('postit_id', $postit->id); ?>
                 <h5 class="ui-widget-header"><?php echo $postit->titre ?></h5>
-                <img src="/img/postit-min.png" alt="postit" width="96" height="72" />
+                
+                <?php 
+                $postitimg  = '/img/postit-min.png';
+                if($postit->type == 1) {
+                   $postitimg  = '/img/post-it-bleu.png'; 
+                }
+                if($postit->type == 2) {
+                   $postitimg  = '/img/post-it-vert.png'; 
+                }
+                if($postit->type == 3) {
+                   $postitimg  = '/img/post-it-rouge.png'; 
+                }
+                ?>
+                <img src="<?php echo $postitimg?>" alt="postit" width="96" height="72" />
                 <span class="text"><?php echo $postit->texte ?></span>
                 <span class="date"><?php echo $postit->date ?></span>
-                <a href="/img/postit.png" title="post-it" class="ui-icon ui-icon-zoomin">Aggrandir</a>
+                <a href="/img/postit.png" title="post-it" class="ui-icon ui-icon-zoomin">Agrandir</a>
             </li>
         <?php endforeach; ?>
         </ul>
