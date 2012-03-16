@@ -162,3 +162,12 @@
         }
       });
     }    
+    
+ function addPostIt(desktopId){
+     $.ajax({
+        url: '/postit/add/1' + desktopId,
+        success: function(data) {
+          $('#dalia').html(data);
+        }
+      });
+    }        

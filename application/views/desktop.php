@@ -11,8 +11,8 @@
 	<?php endforeach; ?>
 
     <?php if ($row->id == $daliaDesktop) : ?>
-        <div id="anchor">
-            <?php echo anchor('postit/add/'.$row->id, 'ajouter un PostId'); ?>
+        <div id="anchor" onclick="addPostIt(<?php echo $row->id; ?> )">
+            ajouter un PostId
         <div>
     <?php endif; ?>
     <?php if (empty($daliaDesktop)) : ?>
@@ -39,3 +39,4 @@
 </div>
 
 <?php $this->load->view('footer');?>
+

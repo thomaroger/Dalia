@@ -1,17 +1,21 @@
 
-<div id="form">	
-    Ajouter un postIt
+<div id="postform">	
+    <h2>Ajouter un postIt</h2>
     <?php echo form_open("/postit/insert"); ?>
     <?php echo form_hidden('desktop_id', $this->uri->segment(3)); ?>
-    <div class="ligne">
-        <label> Titre : </label>
-        <input type="text" name="titre" />  
-    </div>
-    <div class="ligne">
-        <label> Texte : </label>
-        <textarea name="texte" ></textarea>  
-    </div>
-    <div class="ligne">
-        <input type="submit" value="ajouter" />
-    </div>
+    <div>
+        <div class="ligne">
+            <label> Titre </label>
+            <br />
+            <input type="text" name="titre" />  
+        </div>
+        <div class="ligne">
+            <label> Texte </label>
+            <br />
+            <textarea name="texte" ></textarea>  
+        </div>
+        <div class="ligne">
+            <input type="submit" value="ajouter" />
+        </div>
+    <div>
 </div>

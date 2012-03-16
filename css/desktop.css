@@ -7,6 +7,9 @@ ul {
 list-style: none;
 }
 
+body {
+      background-color: #eee;  
+}
 #dalia {
     width:1000px;
     margin: 10px auto;
@@ -19,10 +22,14 @@ list-style: none;
 
 #desktops ul li {
     width:375px;
-    height:75px;
+    height:58px;
     padding : 5px;
     float:left;
     margin :5px;
+    background-color: #ccc;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
     border:solid 1px black;
 }
 
@@ -33,13 +40,44 @@ list-style: none;
 #desktops ul li span.position {
     text-align:right;
     padding-right:60px;
+    color: #427391;
 }
-.assiociate {
-    color:red;
+#desktops ul li span.assiociate {
+    color: #7e0000;
+    padding-left : 10px;
+    display: inline;
 }
 
 .anchor:hover {
-    text-decoration:underline
+    text-decoration:underline;
+}
+
+#postform {
+   background-color: #ccc;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border:solid 1px black; 
+    width:375px;
+    height:375px;
+    padding : 10px;
+}
+
+#postform h2 {
+    text-align:center;   
+}
+
+#postform  div{
+    margin : 20px;
+}
+
+#postform input ,
+#postform textarea {
+    width:300px;
+}
+
+#postform textarea  {
+    height : 150px;
 }
 
 #alert {

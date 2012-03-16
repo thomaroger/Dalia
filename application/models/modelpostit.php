@@ -2,16 +2,7 @@
 
 class Modelpostit extends CI_MODEL {
     
-    
-
-    var $user_id  = "";
-    var $desktop_id  = "";
-    var $titre = "";
-    var $texte = "";
-    var $date = '';
-    var $posX = '';
-    var $posY = '';
-    
+        
     const STATE_OK = 1;
     const STATE_DELETED = 0;
     
@@ -34,6 +25,7 @@ class Modelpostit extends CI_MODEL {
     function updatePostIt(){
         $this->posX = !empty($_POST['posX'])?$_POST['posX']:0;
         $this->posY = !empty($_POST['posY'])?$_POST['posY']:0;
+        $this->date = date('Y-m-d H:i:s',time());
         $this->desktop_id = $_POST['desktop_id'];
         $this->db->update('postit', $this, array('id' => $_POST['id']));
     }
