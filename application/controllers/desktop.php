@@ -10,8 +10,8 @@ class Desktop extends CI_Controller {
 	{
 	    $data = array();
 	  
-	    $desktopId = $this->uri->segment(3);
-	    if(!empty($desktopId) && is_numeric($desktopId)){
+	    $desktopId = (int) $this->uri->segment(3);
+	    if(!empty($desktopId)){
 	        $this->db->where('id',$desktopId);
 	    }
 	    $data['query'] = $this->db->get('desktop');

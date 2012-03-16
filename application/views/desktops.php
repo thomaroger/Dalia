@@ -1,3 +1,6 @@
+<?php $this->load->view('header');?>
+<?php $this->load->view('layout');?>
+
 <div id="desktop">	
 	<?php foreach($query->result() as $row) : ?>
 	    <?php echo $row->prenom; ?>
@@ -6,3 +9,5 @@
 	    <br />
 	<?php endforeach; ?>
 </div>
+
+<?php $this->load->view('footer');?>
