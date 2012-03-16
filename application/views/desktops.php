@@ -18,7 +18,6 @@
                 <span class="assiociate"> bureau associé </span>
             <?php endif; ?>
 	    </span>
-	   
 	    <span class="position"><?php echo $desktop->position; ?></span>
 
          <div class="anchor" onclick="seeDesktop(<?php echo $desktop->id ?>)">
@@ -32,5 +31,7 @@
 <?php if(!$isAjax) : ?>
     <?php $this->load->view('footer');?>
 <?php endif; ?>
+
+    <?php $this->load->view('open_space_js');?>
 </div>
 
