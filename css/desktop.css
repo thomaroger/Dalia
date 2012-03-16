@@ -153,3 +153,6 @@ body {
     display: none; 
 }
 
+.ui-state-highlight {
+    background-color: #882222;
+}
