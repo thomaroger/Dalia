@@ -11,6 +11,7 @@
         function sendImage($item, $desktop) {
             var postit_id = $('input[name="postit_id"]').val();
             var desktop_id = $desktop.find('input').val();
+            desktop_id = desktop_id*1 - 2;
             
             $.ajax({
                 type: "POST",
