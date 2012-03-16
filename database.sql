@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Ven 16 Mars 2012 à 11:52
+-- Généré le : Ven 16 Mars 2012 à 11:59
 -- Version du serveur: 5.0.91
 -- Version de PHP: 5.3.10
 
@@ -19,6 +19,40 @@ SET time_zone = "+00:00";
 --
 -- Base de données: `dalia`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `desktop`
+--
+
+CREATE TABLE IF NOT EXISTS `desktop` (
+  `id` int(11) NOT NULL auto_increment,
+  `prenom` varchar(255) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `position` varchar(255) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+
+--
+-- Contenu de la table `desktop`
+--
+
+INSERT INTO `desktop` (`id`, `prenom`, `nom`, `position`) VALUES
+(1, 'Thomas', 'Roger', 'Developpeur'),
+(2, 'Damien', 'Buton', 'Developpeur'),
+(3, 'Romain', 'Rousselin', 'Chef de projet'),
+(4, 'Sylvain', 'Domergue', 'Manager'),
+(5, 'Hugo', 'Lebaron', 'Developpeur'),
+(6, 'Emeric', 'Grangette', 'Developpeur'),
+(7, 'Clement', 'Moysan', 'Developpeur'),
+(8, 'Matthieu', 'Robin', 'Palm'),
+(9, 'Martin', 'Arsac', 'Manager'),
+(10, 'Guillaume', 'Estassy', 'Production'),
+(11, 'Thierry', 'Longis', 'Referent'),
+(12, 'Florent', 'Requin', 'Integrateur'),
+(13, 'Richard', 'Nguyen', 'Developpeur'),
+(14, 'Franck', 'Brami', 'Developpeur');
 
 -- --------------------------------------------------------
 
