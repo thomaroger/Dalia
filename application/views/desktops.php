@@ -12,7 +12,8 @@
 <div id="desktops">
     <ul>
 	<?php foreach($desktops->result() as $desktop) : ?>
-	    <li>
+	    <li class='user_space'>
+        <?php echo form_hidden('desktop_id', $desktop->id); ?>
 	    <span><strong><?php echo ucfirst($desktop->prenom)." ".strtoupper($desktop->nom); ?></strong>
 	        <?php if($daliaDesktop == $desktop->id) : ?>
                 <span class="assiociate"> bureau associé </span>
@@ -23,7 +24,7 @@
          <div class="anchor" onclick="seeDesktop(<?php echo $desktop->id ?>)">
             voir le bureau
         </div>
-        
+
 	    </li>
 	<?php endforeach; ?>
     </ul>
