@@ -47,10 +47,13 @@ CREATE TABLE IF NOT EXISTS `postit` (
   `desktop_id` int(11) NOT NULL,
   `titre` varchar(255) NOT NULL,
   `texte` varchar(255) NOT NULL,
+  `posX` int(11) NOT NULL,
+  `posY` int(11) NOT NULL,      
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
-  KEY `desktop_id` (`desktop_id`),
-  KEY `user_id` (`user_id`)
+  FOREIGN KEY (`desktop_id`)
+                        REFERENCES desktop( id)
+                        ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
