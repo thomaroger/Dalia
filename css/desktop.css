@@ -7,6 +7,13 @@ ul {
 list-style: none;
 }
 
+.clear {
+ clear: both;    
+ height:0;
+ line-height:0;
+}
+
+
 body {
       background-color: #eee;  
 }
@@ -61,6 +68,7 @@ body {
     width:375px;
     height:375px;
     padding : 10px;
+    margin : 0px auto;
 }
 
 #postform h2 {
@@ -85,6 +93,38 @@ body {
     color:red;
     font-size : 16px;
     width : 800px;
+}
+
+#desktop {
+   height:100px; 
+}
+
+
+#desktopPers {
+    width:375px;
+    height:80px;
+    padding : 5px;
+    float:left;
+    margin :5px;
+    background-color: #ccc;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border:solid 1px black;
+}
+
+#desktopPers span {
+    display:block;
+}
+
+#desktopPers span.position {
+    text-align:right;
+    padding-right:60px;
+    color: #427391;
+}
+
+#desktopPers a:hover {
+    text-decoration:none;
 }
 
 #gallery { 
@@ -151,7 +191,7 @@ body {
 
 #trash .gallery h5, #bin .gallery h5 { 
     display: none; 
-}
+
 
 .ui-state-highlight {
     background-color: #882222;

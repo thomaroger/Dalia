@@ -1,6 +1,6 @@
 
 <div id="postform">	
-    <h2>Ajouter un postIt</h2>
+    <h2>Ajout d'un post it</h2>
     <?php echo form_open("/postit/insert"); ?>
     <?php echo form_hidden('desktop_id', $this->uri->segment(3)); ?>
     <div>

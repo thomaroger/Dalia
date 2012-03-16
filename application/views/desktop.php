@@ -3,30 +3,30 @@
 
 
 <div id="desktop">
-	<?php foreach($desktop->result() as $row) : ?>
-	    <?php echo $row->prenom; ?>
-	    <?php echo $row->nom; ?>
-	    <?php echo $row->position; ?>
-	    <br />
-	<?php endforeach; ?>
-
+    <div id="desktopPers">
+    	<?php foreach($desktop->result() as $row) : ?>
+    	   <span><strong><?php echo ucfirst($row->prenom)." ".strtoupper($row->nom); ?></strong></span>
+    	     <span class="position"><?php echo $row->position; ?></span>
+    	    <br />
+    	<?php endforeach; ?>
     <?php if ($row->id == $daliaDesktop) : ?>
-        <div id="anchor" onclick="addPostIt(<?php echo $row->id; ?> )">
+        <div id="anchor" onclick="addPostIt(<?php echo $row->id;?>)">
             ajouter un PostId
-        <div>
+        </div>
     <?php endif; ?>
     <?php if (empty($daliaDesktop)) : ?>
         <div id="anchor">
             <?php echo anchor('desktop/associate/'.$row->id, "s'associer a ce bureau"); ?>
-        <div>
+        </div>
     <?php endif; ?>
+    </div>
+  
 
     <div class="demo ui-widget ui-helper-clearfix">
 
         <ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
         <?php foreach($postits->result() as $postit) : ?>
             <li class="ui-widget-content ui-corner-tr">
-                <?php echo form_hidden('postit_id', $postit->id); ?>
                 <h5 class="ui-widget-header"><?php echo $postit->titre ?></h5>
                 <img src="/img/postit-min.png" alt="postit" width="96" height="72" />
                 <span class="text"><?php echo $postit->texte ?></span>
@@ -40,4 +40,6 @@
 </div>
 
 <?php $this->load->view('footer');?>
+
+
 

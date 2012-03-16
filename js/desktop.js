@@ -163,7 +163,7 @@
     
  function addPostIt(desktopId){
      $.ajax({
-        url: '/postit/add/1' + desktopId,
+        url: '/postit/add/' + desktopId,
         success: function(data) {
           $('#dalia').html(data);
         }
