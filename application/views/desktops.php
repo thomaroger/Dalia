@@ -3,24 +3,25 @@
     <?php $this->load->view('layout');?>
 <?php endif; ?>
 
-<div id="desktops">	
+<div id="desktops">
     <ul>
-        
 	<?php foreach($desktops->result() as $desktop) : ?>
 	    <li>
 	    <span><?php echo ucfirst($desktop->prenom)." ".strtoupper($desktop->nom); ?></span>
 	    <?php if($daliaDesktop == $desktop->id) : ?>
-            <span class="assiociate"> bureau associé </span>    
+            <span class="assiociate"> bureau associé </span>
         <?php endif; ?>
 	    <span class="position"><?php echo $desktop->position; ?></span>
-        
+
          <div id="anchor">
             <?php echo anchor('desktop/index/'.$desktop->id, 'voir le desktop'); ?>
          </div>
 	    </li>
 	<?php endforeach; ?>
-</ul>	
+    </ul>
 </div>
 <?php if(!$isAjax) : ?>
     <?php $this->load->view('footer');?>
 <?php endif; ?>
+</div>
+

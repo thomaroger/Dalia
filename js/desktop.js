@@ -125,12 +125,31 @@
 
             return false;
         });
+              
+        $( "a.ui-icon-plus" ).click(function( event ) {
+            var userId = $('input[name="desktop_id"]').val();
+            $.ajax({
+                url: '/desktop/index/' + userId,
+                success: function(data) {
+                  $('#dalia').html(data);
+                }
+              });
+        });
+       
+        $( "a.ui-icon-moins" ).click(function( event ) {
+            $.ajax({
+                type: "POST",
+                url: '/desktops',
+                success: function(data) {
+                  $('#dalia').html(data);
+                }
+              });
+        });
         
         // view open space
         function viewOpenSpace() {
             var src = $link.attr( "href" );
-                
-            
+             
         }
         
     });
