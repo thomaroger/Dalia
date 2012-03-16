@@ -121,10 +121,35 @@
                 recycleImage( $item );
             } else if ( $target.is( "a.ui-icon-delete" ) ) {
                 deleteImage( $item );
-            }
+            }            
 
             return false;
         });
+        
+        $( "a.ui-icon-moins" ).click(function( event ) {
+            $.ajax({
+                type: "POST",
+                url: "/desktops",
+                context: document.body,
+                success: function(data){
+                  $( "#content").html(data);
+                }
+              });
+        });
+        
+        
+        $( "a.ui-icon-plus" ).click(function( event ) {
+            var user = $( 'input[name|="desktop_id"]' ).value;
+            $.ajax({
+                type: "POST",
+                url: "/desktop/index/" + user,
+                context: document.body,
+                success: function(data){
+                  $( "#content").html(data);
+                }
+              });
+        });
+        
         
         // view open space
         function viewOpenSpace() {
