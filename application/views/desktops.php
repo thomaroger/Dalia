@@ -3,6 +3,7 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <?php if(!$isAjax) : ?>
     <?php $this->load->view('header');?>
     <?php $this->load->view('layout');?>
@@ -21,6 +22,8 @@
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 <div id="desktop">
 	<?php foreach($desktops->result() as $desktop) : ?>
 	    <?php echo $desktop->prenom; ?>
@@ -30,6 +33,9 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -50,6 +56,7 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     </ul>
 </div>
 <?php if(!$isAjax) : ?>
@@ -57,6 +64,9 @@
 <?php endif; ?>
 </div>
 
+=======
+</div>
+>>>>>>> Stashed changes
 =======
 </div>
 >>>>>>> Stashed changes
