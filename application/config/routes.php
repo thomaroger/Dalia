@@ -64,8 +64,10 @@
 |
 */
 
-$route['default_controller'] = "desktop";
-$route['404_override'] = '';
+$route["desktop/:num"] = "desktop/$1";
+$route["desktops"] = "desktops";
+//$route["default_controller"] = "desktops";
+$route["404_override"] = '';
 
 
 /* End of file routes.php */

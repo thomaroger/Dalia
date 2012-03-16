@@ -12,4 +12,7 @@ Css3
 
     DocumentRoot "/var/local/webroot/dalia/web"
     DirectoryIndex app_dev.php
+    RewriteEngine on
+    RewriteCond $1 !^(index\.php|images|robots\.txt)
+    RewriteRule ^(.*)$ /index.php/$1 [L]
 </virtualhost>
