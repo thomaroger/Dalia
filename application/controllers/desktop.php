@@ -10,8 +10,7 @@ class Desktop extends CI_Controller {
 	public function index()
 	{
 	    $data = array();
-	    $data['name'] = "Helloworld";
-	    $data['query'] = $this->db->get('entries');
+	    $data['query'] = $this->db->get('desktop');
 		$this->load->view('desktop', $data);
 	}
 }
