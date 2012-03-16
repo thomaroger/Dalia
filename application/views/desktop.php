@@ -1,13 +1,15 @@
 <?php $this->load->view('header');?>
 <?php $this->load->view('layout');?>
-<div id="desktop">	
-	<?php foreach($desktop->result() as $row) : ?>
+
+<div id="desktop">
+	<?php foreach($query->result() as $row) : ?>
 	    <?php echo $row->prenom; ?>
 	    <?php echo $row->nom; ?>
 	    <?php echo $row->position; ?>
 	    <br />
 	<?php endforeach; ?>
-</div>
+
+
 <?php if ($row->id == $daliaDesktop) : ?>
     <div id="anchor">
         <?php echo anchor('postit/add/'.$row->id, 'ajouter un PostId'); ?>
@@ -19,16 +21,22 @@
     <div>
 <?php endif; ?>
 
-<ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
-<?php foreach($postits->result() as $postit) : ?>    
-    <li class="ui-widget-content ui-corner-tr">
-    <h5 class="ui-widget-header"><?php echo $postit->titre ?></h5>
-    <img src="/img/postit-min.png" alt="postit" width="96" height="72" />
-    <span class="text"><?php echo $postit->texte ?></span>
-    <span class="date"><?php echo $postit->date ?></span>
-    <a href="/img/postit.png" title="post-it" class="ui-icon ui-icon-zoomin">Aggrandir</a>
-    </li>
-<?php endforeach; ?>    
-</ul>
+<div class="demo ui-widget ui-helper-clearfix">
+
+    <ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
+    <?php foreach($postits->result() as $postit) : ?>
+        <li class="ui-widget-content ui-corner-tr">
+            <h5 class="ui-widget-header"><?php echo $postit->titre ?></h5>
+            <img src="/img/postit-min.png" alt="postit" width="96" height="72" />
+            <span class="text"><?php echo $postit->texte ?></span>
+            <span class="date"><?php echo $postit->date ?></span>
+            <a href="/img/postit.png" title="post-it" class="ui-icon ui-icon-zoomin">Aggrandir</a>
+        </li>
+    <?php endforeach; ?>
+    </ul>
+
+</div>
+<?php $this->load->view('stock');?>
+<?php $this->load->view('bin');?>
 
 <?php $this->load->view('footer');?>
