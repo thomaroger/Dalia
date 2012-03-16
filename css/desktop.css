@@ -1,3 +1,43 @@
+* {
+  margin : 0;
+  padding : 0;
+}
+
+ul {
+list-style: none;
+}
+
+#dalia {
+    width:1000px;
+    margin: 10px auto;
+}
+
+#desktops {
+    height:800px;
+    width:800px;
+}
+
+#desktops ul li {
+    width:375px;
+    height:75px;
+    padding : 5px;
+    float:left;
+    margin :5px;
+    border:solid 1px black;
+}
+
+#desktops ul li span {
+    display:block;
+}
+
+#desktops ul li span.position {
+    text-align:right;
+    padding-right:60px;
+}
+.assiociate {
+    color:red;
+}
+
 #gallery { 
     float: left; 
     width: 65%; 
