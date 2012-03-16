@@ -47,10 +47,19 @@
                     $( "<ul class='gallery ui-helper-reset'/>" ).appendTo( $bin );
 
                 $item.find( "a.ui-icon-trash" ).remove();
+                   
+                $.ajax({
+                    type: "POST",
+                    url: '/postit/delete',
+                    data: { id : $item.find('input').val()},
+                  });
+               
                 $item.append( recycle_icon ).appendTo( $list ).fadeOut(function() {
                     $item
                         .remove();
                 });
+             
+                
             });
         }
               

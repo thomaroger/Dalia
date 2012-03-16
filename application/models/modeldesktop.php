@@ -1,13 +1,7 @@
 <?php 
 
 class Modeldesktop extends CI_MODEL {
-    
-    
-   /* var $id  = "";
-    var $prenom  = "";
-    var $nom  = "";
-    var $position = "";*/
-    
+        
     function __construct(){
         parent::__construct();
     }

@@ -24,4 +24,8 @@ class Postit extends CI_Controller {
     public function update(){
          $this->modelpostit->updatePostIt();
     }
+    
+    public function delete(){
+         $this->modelpostit->deletePostIt();
+    }
 }

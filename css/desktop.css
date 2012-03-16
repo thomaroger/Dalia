@@ -173,7 +173,11 @@ body {
     min-height: 18em; 
     padding: 1%;
     margin-left: 10px;
-    background-color: #992222;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border:solid 1px black;
+    background-color: #eee;
 }
 
 * html #trash, * html #bin { 
