@@ -33,6 +33,9 @@
 	<?php if(!$unset_add){?>
 	<div class="tDiv">
 		<div class="tDiv2">
+		    <?php 
+		    $add_url = str_replace('/index.php','',$add_url);
+		    ?>
         	<a href='<?php echo $add_url?>' title='<?php echo $this->l('list_add'); ?> <?php echo $subject?>' class='add-anchor'>
 			<div class="fbutton">
 				<div>
@@ -49,6 +52,9 @@
 	<div id='ajax_list'>
 		<?php echo $list_view?>
 	</div>
+	<?php 
+		    $ajax_list_url = str_replace('/index.php','',$ajax_list_url);
+		    ?>
 	<form action='<?php echo $ajax_list_url?>' method='post' id='filtering_form' autocomplete = "off" >
 	<div class="sDiv" id='quickSearchBox'>
 		<div class="sDiv2">

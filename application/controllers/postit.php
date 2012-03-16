@@ -20,4 +20,8 @@ class Postit extends CI_Controller {
 	    redirect('desktop/index/'.$_POST['desktop_id']);
 	}
 
+
+    public function update(){
+         $this->modelpostit->updatePostIt();
+    }
 }

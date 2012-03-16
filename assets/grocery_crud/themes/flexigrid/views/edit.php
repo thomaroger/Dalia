@@ -25,7 +25,8 @@
 			<span></span>
 		</div>	
 	</div>
-<div id='main-table-box'>	
+<div id='main-table-box'>
+    <?php $update_url = str_replace('/index.php','',$update_url); ?>
 	<form action='<?php echo $update_url?>' method='post' id='crudForm' autocomplete='off' enctype="multipart/form-data">
 	<div class='form-div'>
 		<?php
@@ -72,6 +73,8 @@
 	</form>	
 </div>
 </div>	
+<?php $validation_url = str_replace('/index.php','',$validation_url); ?>
+<?php $list_url = str_replace('/index.php','',$list_url); ?>
 <script>
 	var validation_url = '<?php echo $validation_url?>';
 	var list_url = '<?php echo $list_url?>';

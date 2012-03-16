@@ -2147,82 +2147,113 @@ class grocery_CRUD_States extends grocery_CRUD_Layout
 	}
 	
 	protected function getListUrl()
-	{
-		return $this->state_url('');
+	{    
+	    $url = $this->state_url('');
+		$url = str_replace('/index.php','',$url);
+		return $url;
 	}
 
 	protected function getAjaxListUrl()
 	{
-		return $this->state_url('ajax_list');
+		$url = $this->state_url('ajax_list');
+		$url = str_replace('/index.php','',$url);
+		return $url;
 	}
 
 	protected function getAjaxListInfoUrl()
 	{
-		return $this->state_url('ajax_list_info');
+		$url = $this->state_url('ajax_list_info');
+		$url = str_replace('/index.php','',$url);
+		return $url;
 	}
 	
 	protected function getAddUrl()
 	{
-		return $this->state_url('add');
+		$url = $this->state_url('add');
+		$url = str_replace('/index.php','',$url);
+		return $url;
 	}
 	
 	protected function getInsertUrl()
 	{
-		return $this->state_url('insert');
+		$url = $this->state_url('insert');
+		$url = str_replace('/index.php','',$url);
+		return $url;
 	}
 	
 	protected function getValidationInsertUrl()
 	{
-		return $this->state_url('insert_validation');
+		$url = $this->state_url('insert_validation');
+		$url = str_replace('/index.php','',$url);
+		return $url;
 	}
 	
 	protected function getValidationUpdateUrl($primary_key = null)
 	{
 		if($primary_key === null)
-			return $this->state_url('update_validation');
+			$url = $this->state_url('update_validation');
 		else
-			return $this->state_url('update_validation/'.$primary_key);
+			$url = $this->state_url('update_validation/'.$primary_key);
+			
+		$url = str_replace('/index.php','',$url);
+		return $url;
 	}	
 
 	protected function getEditUrl($primary_key = null)
 	{
 		if($primary_key === null)
-			return $this->state_url('edit');
+			$url = $this->state_url('edit');
 		else
-			return $this->state_url('edit/'.$primary_key);
+			$url = $this->state_url('edit/'.$primary_key);
+			
+		$url = str_replace('/index.php','',$url);
+		return $url;
 	}
 	
 	protected function getUpdateUrl($state_info)
 	{		
-		return $this->state_url('update/'.$state_info->primary_key);
+		$url = $this->state_url('update/'.$state_info->primary_key);
+		$url = str_replace('/index.php','',$url);
+		return $url;
 	}	
 	
 	protected function getDeleteUrl($state_info = null)
 	{
 		if(empty($state_info))
-			return $this->state_url('delete');
+			$url = $this->state_url('delete');
 		else
-			return $this->state_url('delete/'.$state_info->primary_key);
+			$url = $this->state_url('delete/'.$state_info->primary_key);
+			
+		$url = str_replace('/index.php','',$url);
+		return $url;
 	}
 
 	protected function getUploadUrl($field_name)
 	{		
-		return $this->state_url('upload_file/'.$field_name);
+		$url = $this->state_url('upload_file/'.$field_name);
+		$url = str_replace('/index.php','',$url);
+		return $url;
 	}	
 
 	protected function getFileDeleteUrl($field_name)
 	{
-		return $this->state_url('delete_file/'.$field_name);
+		$url = $this->state_url('delete_file/'.$field_name);
+		$url = str_replace('/index.php','',$url);
+		return $url;
 	}	
 
 	protected function getAjaxRelationUrl()
 	{
-		return $this->state_url('ajax_relation');
+		$url = $this->state_url('ajax_relation');
+		$url = str_replace('/index.php','',$url);
+		return $url;
 	}
 	
 	protected function getAjaxRelationManytoManyUrl()
 	{
-		return $this->state_url('ajax_relation_n_n');
+		$url = $this->state_url('ajax_relation_n_n');
+		$url = str_replace('/index.php','',$url);
+		return $url;
 	}	
 	
 	public function getStateInfo()

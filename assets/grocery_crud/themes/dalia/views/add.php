@@ -1,35 +1,32 @@
 <?php  
 	if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-	$this->set_css('assets/grocery_crud/themes/flexigrid/css/flexigrid.css');
+	$this->set_css('assets/grocery_crud/themes/datatables/css/datatables.css');
 	$this->set_js('assets/grocery_crud/themes/flexigrid/js/jquery.form.js');	
-	$this->set_js('assets/grocery_crud/themes/flexigrid/js/flexigrid-add.js');
+	$this->set_js('assets/grocery_crud/themes/datatables/js/datatables-add.js');
+	$this->set_css('assets/grocery_crud/css/ui/simple/jquery-ui-1.8.10.custom.css');
+	$this->set_js('assets/grocery_crud/js/jquery_plugins/jquery-ui-1.8.10.custom.min.js');	
 ?>
 <script type='text/javascript'>
 	var base_url = '<?php echo base_url();?>';
 	
 	var upload_a_file_string = '<?php echo $this->l('form_upload_a_file');?>';
 </script>
-<div class="flexigrid crud-form" style='width: 100%;'>	
-	<div class="mDiv">
-		<div class="ftitle">
-			<div class='ftitle-left'>
-				<?php echo $this->l('form_add'); ?> <?php echo $subject?>
-			</div>
-			<div class='ftitle-right'>
-			    <?php $list_url = str_replace('/index.php','',$list_url); ?>
-				<a href='<?php echo $list_url?>' onclick='javascript: return goToList()' ><?php echo $this->l('form_back_to_list'); ?></a>
-			</div>
-			<div class='clear'></div>
+<div class='ui-widget-content ui-corner-all datatables'>
+	<h3 class="ui-accordion-header ui-helper-reset ui-state-default form-title">
+		<div class='floatL form-title-left'>
+			<a href="#"><?php echo $this->l('form_add'); ?> <?php echo $subject?></a>
+		</div> 
+		<div class='floatR'>
+			<a href='<?php echo $list_url?>' onclick='javascript: return goToList()' class='gotoListButton' >
+				<?php echo $this->l('form_back_to_list'); ?>
+			</a>
 		</div>
-		<div title="Minimize/Maximize Table" class="ptogtitle">
-			<span></span>
-		</div>
-	</div>
-<div id='main-table-box'>
-      <?php $insert_url = str_replace('/index.php','',$insert_url); ?>
+		<div class='clear'></div>
+	</h3>
+<div class='form-content form-div'>
 	<form action='<?php echo $insert_url?>' method='post' id='crudForm' autocomplete='off' enctype="multipart/form-data">
-		<div class='form-div'>
+		<div>
 			<?php
 			$counter = 0; 
 				foreach($fields as $field)
@@ -53,20 +50,19 @@
 						echo $hidden_field->input;
 					}
 				?>
-			<!-- End of hidden inputs -->
-			
-			
+			<!-- End of hidden inputs -->			
+			<div class='line-1px'></div>
 			<div id='report-error' class='report-div error'></div>
 			<div id='report-success' class='report-div success'></div>							
 		</div>	
-		<div class="pDiv">
+		<div class='buttons-box'>
 			<div class='form-button-box'>
-				<input type='submit' value='<?php echo $this->l('form_save'); ?>'/>
+				<input type='submit' value='<?php echo $this->l('form_save'); ?>' class='ui-input-button'/>
 			</div>			
 			<div class='form-button-box'>
-				<input type='button' value='<?php echo $this->l('form_cancel'); ?>' onclick="javascript: goToList()" />
+				<input type='button' value='<?php echo $this->l('form_cancel'); ?>' onclick="javascript: goToList()" class='ui-input-button' />
 			</div>
-			<div class='form-button-box'>
+			<div class='form-button-box loading-box'>
 				<div class='small-loading' id='FormLoading'><?php echo $this->l('form_insert_loading'); ?></div>
 			</div>
 			<div class='clear'></div>	
@@ -74,14 +70,10 @@
 	</form>	
 </div>
 </div>
-
-<?php $validation_url = str_replace('/index.php','',$validation_url); ?>
-<?php $list_url = str_replace('/index.php','',$list_url); ?>
-
 <script>
 	var validation_url = '<?php echo $validation_url?>';
 	var list_url = '<?php echo $list_url?>';
 
 	var message_alert_add_form = "<?php echo $this->l('alert_add_form')?>";
-	var message_insert_error = "<?php echo $this->l('insert_error')?>";
+	var message_insert_error = "<?php echo $this->l('insert_error')?>";	
 </script>

@@ -37,17 +37,26 @@
 			<td align="left" width='20%'>
 				<div class='tools'>				
 					<?php if(!$unset_delete){?>
-                    	<a href='<?php echo $row->delete_url?>' title='<?php echo $this->l('list_delete')?> <?php echo $subject?>' class="delete-row" >
+					     <?php 
+                        $url = $row->delete_url; 
+                        $url = str_replace('/index.php','',$url);
+                        ?>
+                    	<a href='<?php echo $url?>' title='<?php echo $this->l('list_delete')?> <?php echo $subject?>' class="delete-row" >
                     			<span class='delete-icon'></span>
                     	</a>
                     <?php }?>
                     <?php if(!$unset_edit){?>
-						<a href='<?php echo $row->edit_url?>' title='<?php echo $this->l('list_edit')?> <?php echo $subject?>'><span class='edit-icon'></span></a>
+                        <?php 
+                        $url = $row->edit_url; 
+                        $url = str_replace('/index.php','',$url);
+                        ?>
+						<a href='<?php echo $url?>' title='<?php echo $this->l('list_edit')?> <?php echo $subject?>'><span class='edit-icon'></span></a>
 					<?php }?>
 					<?php 
 					if(!empty($row->action_urls)){
 						foreach($row->action_urls as $action_unique_id => $action_url){ 
 							$action = $actions[$action_unique_id];
+							$action_url = str_replace('/index.php','',$action_url);
 					?>
 							<a href="<?php echo $action_url; ?>" class="<?php echo $action->css_class; ?> crud-action" title="<?php echo $action->label?>"><?php 
 								if(!empty($action->image_url))

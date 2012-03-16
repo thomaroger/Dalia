@@ -12,8 +12,8 @@ class Modelpostit extends CI_MODEL {
     var $posX = '';
     var $posY = '';
     
-    const STATE_OK = 0;
-    const STATE_DELETED = 1;
+    const STATE_OK = 1;
+    const STATE_DELETED = 0;
     
     function __construct(){
         parent::__construct();
@@ -32,9 +32,9 @@ class Modelpostit extends CI_MODEL {
     }
     
     function updatePostIt(){
-        $this->posX = $_POST['posX'];
-        $this->posY = $_POST['posY'];
-        $this->user_id = $_POST['user_id'];
+        $this->posX = !empty($_POST['posX'])?$_POST['posX']:0;
+        $this->posY = !empty($_POST['posY'])?$_POST['posY']:0;
+        $this->desktop_id = $_POST['desktop_id'];
         $this->db->update('postit', $this, array('id' => $_POST['id']));
     }
     
@@ -43,6 +43,7 @@ class Modelpostit extends CI_MODEL {
         if(!empty($desktopId)){
 	        $this->db->where('desktop_id',$desktopId);
 	    }
+	    $this->db->where('statut',self::STATE_OK);
 	    return $this->db->get('postit');
     }
     
