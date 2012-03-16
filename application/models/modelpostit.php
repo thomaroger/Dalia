@@ -27,7 +27,7 @@ class Modelpostit extends CI_MODEL {
         $this->posX = !empty($_POST['posX'])?$_POST['posX']:0;
         $this->posY = !empty($_POST['posY'])?$_POST['posY']:0;
         $this->date = date('Y-m-d H:i:s',time());
-        $this->state = self::STATE_OK;
+        $this->statut = self::STATE_OK;
         $this->db->insert('postit', $this); 
     }
     
