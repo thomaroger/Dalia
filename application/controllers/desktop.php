@@ -10,6 +10,9 @@ class Desktop extends CI_Controller {
 	{
 	    $data = array();
 	    $desktopId = (int) $this->uri->segment(3);
+	    if($desktopId == 0) {
+	      redirect('desktops');  
+	    }
 	    $data['desktop'] = $this->modeldesktop->getDesktopById($desktopId);
 	    $data['postits'] = $this->modelpostit->getPostItByDesktopId($desktopId);
 	    $data['isAjax'] = $this->input->isAjax();

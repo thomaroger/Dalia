@@ -38,6 +38,17 @@ list-style: none;
     color:red;
 }
 
+.anchor:hover {
+    text-decoration:underline
+}
+
+#alert {
+    text-align:center;
+    color:red;
+    font-size : 16px;
+    width : 800px;
+}
+
 #gallery { 
     float: left; 
     width: 65%; 
@@ -80,7 +91,7 @@ list-style: none;
 
 #trash, #bin { 
     float: right; 
-    width: 32%; 
+    width: 200px; 
     min-height: 18em; 
     padding: 1%;
     margin-left: 10px;

@@ -153,3 +153,12 @@
         }
         
     });
+    
+ function seeDesktop(userId){
+     $.ajax({
+        url: '/desktop/index/' + userId,
+        success: function(data) {
+          $('#dalia').html(data);
+        }
+      });
+    }    

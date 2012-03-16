@@ -3,6 +3,12 @@
     <?php $this->load->view('layout');?>
 <?php endif; ?>
 
+<?php if($daliaDesktop === false) : ?>
+    <div id="alert">
+        Vous devez vous associer a un bureau
+    </div>
+<?php endif; ?>
+
 <div id="desktops">
     <ul>
 	<?php foreach($desktops->result() as $desktop) : ?>
@@ -13,9 +19,10 @@
         <?php endif; ?>
 	    <span class="position"><?php echo $desktop->position; ?></span>
 
-         <div id="anchor">
-            <?php echo anchor('desktop/index/'.$desktop->id, 'voir le desktop'); ?>
-         </div>
+         <div class="anchor" onclick="seeDesktop(<?php echo $desktop->id ?>)">
+            voir le desktop
+        </div>
+        
 	    </li>
 	<?php endforeach; ?>
     </ul>
