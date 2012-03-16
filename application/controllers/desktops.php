@@ -10,6 +10,7 @@ class Desktops extends CI_Controller {
 	{
 	    $data = array();
 	    $data['desktops'] = $this->modeldesktop->getDesktops();
+        $data['isAjax'] = $this->input->isAjax();
 	    $data['daliaDesktop'] = $this->input->cookie('daliaDesktop');
 		$this->load->view('desktops', $data);
 	}

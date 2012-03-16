@@ -830,7 +830,6 @@ class CI_Javascript {
 			return $result;
 		}
 	}
-
 	// --------------------------------------------------------------------
 }
 // END Javascript Class

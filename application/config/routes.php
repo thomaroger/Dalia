@@ -68,6 +68,7 @@ $route["postit/insert"] = "postit/insert";
 $route["postit/add/:num"] = "postit/add/$1";
 $route["desktop/:num"] = "desktop/$1";
 $route["desktops"] = "desktops";
+$route['admin'] = "admin";
 $route["default_controller"] = "desktops";
 $route["404_override"] = '';
 

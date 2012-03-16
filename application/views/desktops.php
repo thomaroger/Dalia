@@ -1,5 +1,7 @@
-<?php $this->load->view('header');?>
-<?php $this->load->view('layout');?>
+<?php if(!$isAjax) : ?>
+    <?php $this->load->view('header');?>
+    <?php $this->load->view('layout');?>
+<?php endif; ?>
 
 <div id="desktops">	
     <ul>
@@ -19,5 +21,6 @@
 	<?php endforeach; ?>
 </ul>	
 </div>
-
-<?php $this->load->view('footer');?>
+<?php if(!$isAjax) : ?>
+    <?php $this->load->view('footer');?>
+<?php endif; ?>
