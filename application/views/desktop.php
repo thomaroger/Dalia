@@ -20,13 +20,14 @@
         </div>
     <?php endif; ?>
     </div>
-  
+
 
     <div class="demo ui-widget ui-helper-clearfix">
 
         <ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
         <?php foreach($postits->result() as $postit) : ?>
             <li class="ui-widget-content ui-corner-tr">
+                <?php echo form_hidden('postit_id', $postit->id); ?>
                 <h5 class="ui-widget-header"><?php echo $postit->titre ?></h5>
                 <img src="/img/postit-min.png" alt="postit" width="96" height="72" />
                 <span class="text"><?php echo $postit->texte ?></span>
