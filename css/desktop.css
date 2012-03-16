@@ -65,8 +65,8 @@ body {
     -moz-border-radius: 10px;
     border-radius: 10px;
     border:solid 1px black; 
-    width:375px;
-    height:375px;
+    width:400px;
+    height:400px;
     padding : 10px;
     margin : 0px auto;
 }
@@ -80,7 +80,9 @@ body {
 }
 
 #postform input ,
-#postform textarea {
+#postform textarea,
+#postform select
+ {
     width:300px;
 }
 
@@ -143,17 +145,28 @@ body {
 
 .gallery li { 
     float: left; 
-    width: 96px; 
+    width: 195px; 
     padding: 0.4em; 
     margin: 0 0.4em 0.4em 0; 
     text-align: center; 
+    background-color: #ccc;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border:solid 1px black;
 }
 
 .gallery li h5 { 
     margin: 0 0 0.4em; 
     cursor: move;
+    font-size : 15px;
+    font-weight:bold;
 }
 
+.gallery li span {
+    display:block;
+    margin: 10px 10px;
+}
 .gallery li a { 
     float: right; 
 }

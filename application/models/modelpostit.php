@@ -15,6 +15,7 @@ class Modelpostit extends CI_MODEL {
         $this->desktop_id = $_POST['desktop_id'];
         $this->titre = $_POST['titre'];
         $this->texte = $_POST['texte'];
+        $this->type = $_POST['type'];
         $this->posX = !empty($_POST['posX'])?$_POST['posX']:0;
         $this->posY = !empty($_POST['posY'])?$_POST['posY']:0;
         $this->date = date('Y-m-d H:i:s',time());
