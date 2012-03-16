@@ -9,7 +9,7 @@ class Desktops extends CI_Controller {
 	public function index()
 	{
 	    $data = array();
-	    $data['query'] = $this->db->get('desktop');
+	    $data['query'] = $this->modeldesktop->getDesktops();
 		$this->load->view('desktops', $data);
 	}
 }

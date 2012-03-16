@@ -135,8 +135,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array();
-//array('desktop','postit');
+$autoload['model'] = array('modeldesktop');
 
 
 /* End of file autoload.php */

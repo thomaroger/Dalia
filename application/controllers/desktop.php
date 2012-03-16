@@ -9,12 +9,8 @@ class Desktop extends CI_Controller {
 	public function index()
 	{
 	    $data = array();
-	  
 	    $desktopId = (int) $this->uri->segment(3);
-	    if(!empty($desktopId)){
-	        $this->db->where('id',$desktopId);
-	    }
-	    $data['query'] = $this->db->get('desktop');
+	    $data['query'] = $this->modeldesktop->getDesktopById($desktopId);
 		$this->load->view('desktop', $data);
 	}
 }

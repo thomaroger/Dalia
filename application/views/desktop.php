@@ -8,4 +8,7 @@
 	    <br />
 	<?php endforeach; ?>
 </div>
+<div id="anchor">
+    <?php echo anchor('postIt/add/'.$row->id, 'ajouter un PostId'); ?>
+<div>
 <?php $this->load->view('footer');?>

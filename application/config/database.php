@@ -93,5 +93,7 @@ $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 $db['default']['failover'] = array();
 
+
+
 /* End of file database.php */
 /* Location: ./application/config/database.php */
